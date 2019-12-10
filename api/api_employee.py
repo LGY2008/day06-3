@@ -7,6 +7,7 @@ class ApiEmployee:
     # 初始化
     def __init__(self):
         # 添加员工
+
         self.url_add = api.BASE_URL + "/api/sys/user"
         # 员工  {} 为占位符 引用.format(id)
         self.url_employee = api.BASE_URL + "/api/sys/user/{}"
