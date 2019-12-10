@@ -7,7 +7,6 @@ class ApiEmployee:
     # 初始化
     def __init__(self):
         # 添加员工
-
         self.url_add = api.BASE_URL + "/api/sys/user"
         # 员工  {} 为占位符 引用.format(id)
         self.url_employee = api.BASE_URL + "/api/sys/user/{}"
@@ -16,6 +15,7 @@ class ApiEmployee:
     def api_post_employee(self, username, mobile, workNumber):
         # 定义json数据
         data = {"username": username, "mobile": mobile, "workNumber": workNumber}
+        print("test")
         # 调用post方法 必须return
         return requests.post(url=self.url_add, json=data, headers=api.headers)
 
